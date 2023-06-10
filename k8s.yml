@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ideal-octo-tribble
+spec:
+  selector:
+    matchLabels:
+      app: ideal-octo-tribble
+  template:
+    metadata:
+      labels:
+        app: ideal-octo-tribble
+    spec:
+      containers:
+        - image: okteto.dev/ideal-octo-tribble:1.0.0
+          name: ideal-octo-tribble
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ideal-octo-tribble
+spec:
+  type: ClusterIP
+  ports:
+    - name: "ideal-octo-tribble"
+      port: 3000
+  selector:
+    app: ideal-octo-tribble
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ideal-octo-tribble
+  annotations:
+    dev.okteto.com/generate-host: ideal-octo-tribble
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              service:
+                name: ideal-octo-tribble
+                port:
+                  number: 3000
+            path: /
+            pathType: ImplementationSpecific

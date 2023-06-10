@@ -59,18 +59,12 @@
 			<artifactId>bolt-jakarta-jetty</artifactId> <!-- will resolve "bolt" and "bolt-servlet" artifacts as its dependencies -->
 			<version>${bolt.version}</version>
 		</dependency>
-		<!--dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-simple</artifactId>
-			<version>1.7.36</version>
-		</dependency-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>
