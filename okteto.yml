@@ -6,11 +6,11 @@ deploy:
   - kubectl apply -f k8s.yml
 dev:
   ideal-octo-tribble:
-    image: maven:3.9.2-eclipse-temurin-17
+    image: okteto/maven:3
     command: bash
     sync:
       - .:/usr/src/app
     forward:
       - 5005:5005
     volumes:
-      - /home/maven/.gradle
+      - /root/.m2

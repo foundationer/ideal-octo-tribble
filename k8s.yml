@@ -12,7 +12,7 @@ spec:
         app: ideal-octo-tribble
     spec:
       containers:
-        - image: okteto.dev/ideal-octo-tribble:1.0.0
+        - image: foundationer/ideal-octo-tribble:1.0.0
           name: ideal-octo-tribble
 
 ---
