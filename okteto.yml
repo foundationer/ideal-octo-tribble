@@ -1,6 +1,6 @@
 build:
   ideal-octo-tribble:
-    image: foundationer/ideal-octo-tribble:1.0.0
+    image: foundationer/ideal-octo-tribble:main
     context: .
 deploy:
   - kubectl apply -f k8s.yml
