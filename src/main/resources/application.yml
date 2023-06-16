@@ -2,3 +2,6 @@ logging.level:
   com.slack.api: DEBUG
 server:
   port: 3000
+  connection-timeout: 30000
+  session:
+    timeout: 60s
