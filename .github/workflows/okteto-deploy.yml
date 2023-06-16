@@ -1,6 +1,6 @@
 on: [push]
 
-name: example
+name: deploy
 
 jobs:
 
@@ -16,4 +16,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: dev-previews-ideal-octo-tribble
+        name: dev-previews-ideal-octo-tribble-foundationer
