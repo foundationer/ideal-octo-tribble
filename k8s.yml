@@ -21,6 +21,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: ideal-octo-tribble
+  labels:
+    app: ideal-octo-tribble
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP
   ports:
@@ -36,7 +40,7 @@ kind: Ingress
 metadata:
   name: ideal-octo-tribble
   annotations:
-    dev.okteto.com/generate-host: ideal-octo-tribble
+    dev.okteto.com/generate-host: "true"
 spec:
   rules:
     - http:
