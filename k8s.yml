@@ -29,7 +29,7 @@ spec:
   type: ClusterIP
   ports:
     - name: "ideal-octo-tribble"
-      port: 3000
+      port: 443
   selector:
     app: ideal-octo-tribble
 
@@ -49,6 +49,6 @@ spec:
               service:
                 name: ideal-octo-tribble
                 port:
-                  number: 3000
+                  number: 443
             path: /
             pathType: ImplementationSpecific
